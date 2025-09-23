@@ -74,9 +74,10 @@ export default function Home() {
 
         {/* Review Previous Bulletin Button */}
         <div className="flex justify-center mb-8">
-          <button
+          <a
+            href="#previous-bulletin"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 ease-in-out"
-            onClick={() => alert('Previous bulletin feature coming soon!')}
+            title="Previous bulletin feature coming soon"
           >
             <svg 
               className="w-5 h-5 mr-2" 
@@ -92,7 +93,7 @@ export default function Home() {
               />
             </svg>
             Review Previous Bulletin
-          </button>
+          </a>
         </div>
 
         {/* Footer */}
