@@ -31,13 +31,13 @@ export default function Home() {
           {/* This Week's Service */}
           <div className="bg-white rounded-lg shadow-md p-6">
             <h3 className="text-xl font-semibold text-gray-800 mb-4">
-              This Week's Service
+              This Week&apos;s Service
             </h3>
             <div className="space-y-2 text-gray-600">
               <p><strong>Date:</strong> Sunday, {new Date().toLocaleDateString()}</p>
               <p><strong>Time:</strong> 10:30 AM</p>
               <p><strong>Pastor:</strong> [Pastor Name]</p>
-              <p><strong>Theme:</strong> [This Week's Theme]</p>
+              <p><strong>Theme:</strong> [This Week&apos;s Theme]</p>
             </div>
           </div>
 
