@@ -72,6 +72,29 @@ export default function Home() {
           </div>
         </div>
 
+        {/* Review Previous Bulletin Button */}
+        <div className="flex justify-center mb-8">
+          <button
+            className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 ease-in-out"
+            onClick={() => alert('Previous bulletin feature coming soon!')}
+          >
+            <svg 
+              className="w-5 h-5 mr-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7" 
+              />
+            </svg>
+            Review Previous Bulletin
+          </button>
+        </div>
+
         {/* Footer */}
         <footer className="text-center text-gray-600 border-t pt-8">
           <p className="mb-2">
