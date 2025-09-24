@@ -1,11 +1,16 @@
 interface SectionTitleProps {
-  title: string
+  data: {
+    id: string
+    title: string
+  }
 }
 
-export default function SectionTitle({ title }: SectionTitleProps) {
+export default function SectionTitle({ data }: SectionTitleProps) {
   return (
-    <h2 className="text-xl font-sans font-bold uppercase mt-10 mb-4 text-black">
-      {title}
-    </h2>
+    <div id={data.id} className="text-center py-6">
+      <h2 className="text-xl font-sans font-bold text-black uppercase tracking-wide">
+        {data.title}
+      </h2>
+    </div>
   )
 }

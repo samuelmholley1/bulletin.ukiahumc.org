@@ -1,16 +1,21 @@
-import { ResponsiveReadingItem } from '@/types/bulletin'
-
 interface ResponsiveReadingProps {
-  title: string
-  content: ResponsiveReadingItem[]
+  data: {
+    id: string
+    title: string
+    content: Array<{
+      speaker: string
+      text: string
+      isCongregation: boolean
+    }>
+  }
 }
 
-export default function ResponsiveReading({ title, content }: ResponsiveReadingProps) {
+export default function ResponsiveReading({ data }: ResponsiveReadingProps) {
   return (
-    <div className="my-8">
-      <h3 className="text-xl font-sans font-bold uppercase mb-4 text-black">{title}</h3>
+    <div id={data.id} className="my-8">
+      <h3 className="text-xl font-sans font-bold uppercase mb-4 text-black">{data.title}</h3>
       <div className="space-y-3">
-        {content.map((item, index) => (
+        {data.content.map((item, index) => (
           <p key={index} className="leading-relaxed font-serif text-black">
             <strong className="font-sans font-bold mr-2">{item.speaker}:</strong>
             {item.isCongregation ? (

@@ -1,6 +1,11 @@
-import BulletinPage from '@/components/BulletinPage'
+export interface BulletinSection {
+  id: string
+  type: string
+  title: string
+  [key: string]: any
+}
 
-const july13BulletinData = {
+export const bulletinData = {
   churchName: "UKIAH UNITED METHODIST CHURCH",
   motto: "Love God • Live Compassion",
   date: "JULY 13, 2025",
@@ -34,19 +39,22 @@ const july13BulletinData = {
   hymnalKey: "UMH--United Methodist (Blue), TFWS--The Faith We Sing (Black), W&S--Worship & Song (Green)",
   serviceOrder: [
     {
+      id: "prelude",
       type: "hymn",
-      title: "PRELUDE",
+      title: "Prelude",
       hymnTitle: "Come, Thou Fount of Every Blessing",
       number: "#400",
       source: "UMH"
     },
     {
+      id: "welcome",
       type: "sectionTitle",
-      title: "WELCOME"
+      title: "Welcome"
     },
     {
+      id: "threshold-moment",
       type: "thresholdMoment",
-      title: "THRESHOLD MOMENT",
+      title: "Threshold Moment",
       content: [
         {
           speaker: "Leader",
@@ -59,16 +67,18 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "love-divine",
       type: "hymn",
-      title: "WE SING",
+      title: "We Sing",
       hymnTitle: "Love Divine, All Loves Excelling",
       verse: "Verse 2",
       number: "#384",
       source: "UMH"
     },
     {
+      id: "call-to-worship",
       type: "responsiveReading",
-      title: "CALL TO WORSHIP",
+      title: "Call to Worship",
       content: [
         {
           speaker: "Liturgist",
@@ -103,19 +113,22 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "praising",
       type: "hymn",
-      title: "PRAISING",
+      title: "Praising",
       hymnTitle: "Open the Eyes of My Heart Lord",
       number: "#3008",
       source: "W&S"
     },
     {
+      id: "young-at-heart",
       type: "sectionTitle",
-      title: "YOUNG & YOUNG AT HEART TIME"
+      title: "Young & Young at Heart Time"
     },
     {
+      id: "standing-poem",
       type: "contemporaryReading",
-      title: "CONTEMPORARY READING",
+      title: "Contemporary Reading",
       poemTitle: "Standing",
       author: "Kay Lieberknecht",
       content: [
@@ -146,8 +159,9 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "lords-prayer",
       type: "lordsPrayer",
-      title: "COMMUNITY PRAYER ~ THE LORD'S PRAYER (sung in echo)",
+      title: "Community Prayer ~ The Lord's Prayer (sung in echo)",
       content: [
         "Our Mother, Father, Our Mother, Father",
         "Who art in heaven, Who art in heaven", 
@@ -169,8 +183,9 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "ancient-reading",
       type: "scriptureReading",
-      title: "ANCIENT READING",
+      title: "Ancient Reading",
       reference: "Matthew 16:24-17:8",
       version: "The New Revised Standard Version Updated Edition Bible",
       content: [
@@ -180,47 +195,54 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "clouds-of-glory",
       type: "hymn",
-      title: "WE SING",
+      title: "We Sing",
       hymnTitle: "Swiftly Pass the Clouds of Glory",
       number: "#2102",
       source: "TFWS"
     },
     {
+      id: "message",
       type: "message",
-      title: "MESSAGE",
+      title: "Message",
       messageTitle: "Transfiguration",
       speaker: "Rev. Dr. Michele Robbins"
     },
     {
+      id: "offertory",
       type: "offertory",
-      title: "OFFERTORY",
+      title: "Offertory",
       song: "Unwritten",
       artist: "Natasha Bedingfield",
       offeringNote: "Offerings can be placed in the basket on the table, online at ukiahumc.org, or mailed to PO Box 323, Ukiah"
     },
     {
+      id: "doxology",
       type: "asteriskedItem",
-      title: "*DOXOLOGY",
+      title: "*Doxology",
       hymnTitle: "Praise God from Whom All Blessings Flow",
       number: "#94",
       source: "UMH"
     },
     {
+      id: "membership-statement",
       type: "membershipStatement",
-      title: "*MEMBERSHIP STATEMENT",
+      title: "*Membership Statement",
       content: "Members of the Ukiah United Methodist Church accept the freedom God gives us to resist evil, injustice, and oppression in whatever forms they present themselves. We welcome opportunities to bring God's love to the world in as many ways as we can. We promise to uphold our beloved church by our prayers, our presence, our gifts, our service, and our witness."
     },
     {
+      id: "getting-strong",
       type: "hymn",
-      title: "GETTING STRONG",
+      title: "Getting Strong",
       hymnTitle: "Shine, Jesus Shine",
       number: "#2173",
       source: "TFWS"
     },
     {
+      id: "opportunities",
       type: "announcements",
-      title: "OPPORTUNITIES FOR MINISTRY",
+      title: "Opportunities for Ministry",
       items: [
         "If you are thinking of becoming a member, please join Pastor Michele for **Methodism 101 part 2** after Worship in the Social Hall.",
         "**Book Study** will start this week, July 16, for 8 Wednesdays at 3 pm in room #106. Contact Linda, 707.462.3185, about ordering the book 'Practicing Hope' by Mission U for $15.",
@@ -233,8 +255,9 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "go-for-it",
       type: "goForIt",
-      title: "GO FOR IT!",
+      title: "Go For It!",
       attribution: "John Wesley",
       content: [
         { side: "South", text: "Do all the good you can," },
@@ -247,24 +270,23 @@ const july13BulletinData = {
       ]
     },
     {
+      id: "blessing",
       type: "sectionTitle",
-      title: "BLESSING"
+      title: "Blessing"
     },
     {
+      id: "stepping-out",
       type: "asteriskedItem",
-      title: "*STEPPING OUT",
+      title: "*Stepping Out",
       hymnTitle: "Every Time I Feel the Spirit",
       number: "#404",
       source: "UMH"
     },
     {
+      id: "welcoming-statement",
       type: "welcomingStatement",
       title: "We are a Welcoming & Affirming Congregation:",
       content: "We welcome all persons into full participation in the life of the congregation regardless of age, gender identity, race, or ethnic background, sexual orientation, marriage status, or physical or mental condition."
     }
   ]
-}
-
-export default function July13Bulletin() {
-  return <BulletinPage data={july13BulletinData} />
 }

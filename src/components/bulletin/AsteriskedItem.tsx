@@ -1,21 +1,24 @@
 interface AsteriskedItemProps {
-  title: string
-  hymnTitle?: string
-  number?: string
-  source?: string
+  data: {
+    id: string
+    title: string
+    hymnTitle?: string
+    number?: string
+    source?: string
+  }
 }
 
-export default function AsteriskedItem({ title, hymnTitle, number, source }: AsteriskedItemProps) {
+export default function AsteriskedItem({ data }: AsteriskedItemProps) {
   return (
-    <div className="my-6">
-      <h3 className="text-lg font-sans font-bold uppercase mb-2 text-black">{title}</h3>
-      {hymnTitle && (
+    <div id={data.id} className="my-6">
+      <h3 className="text-lg font-sans font-bold uppercase mb-2 text-black">{data.title}</h3>
+      {data.hymnTitle && (
         <div className="flex justify-between items-baseline">
           <p className="text-lg font-serif italic text-black">
-            &ldquo;{hymnTitle}&rdquo;
+            &ldquo;{data.hymnTitle}&rdquo;
           </p>
           <p className="text-md font-sans font-semibold text-black">
-            {number} {source}
+            {data.number} {data.source}
           </p>
         </div>
       )}
