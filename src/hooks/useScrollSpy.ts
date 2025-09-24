@@ -16,7 +16,7 @@ export default function useScrollSpy(sectionIds: string[]) {
         }
       },
       {
-        rootMargin: '-20% 0px -70% 0px', // Only trigger when section is in the top 30% of viewport
+        rootMargin: '0px 0px -50% 0px', // More stable active section detection
         threshold: 0.1
       }
     )

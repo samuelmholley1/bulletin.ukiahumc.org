@@ -7,14 +7,14 @@ export default function ArchivePage() {
   ]
 
   return (
-    <div className="bg-white text-black font-serif min-h-screen">
+    <div className="bg-white text-black dark:bg-black dark:text-white font-serif min-h-screen">
       <div className="px-4 py-8">
         {/* Header */}
         <div className="text-center mb-8">
-          <h1 className="text-2xl font-sans font-bold text-black mb-4">
+          <h1 className="text-2xl font-sans font-bold text-black dark:text-white mb-4">
             Bulletin Archive
           </h1>
-          <p className="font-serif text-black">
+          <p className="font-serif text-black dark:text-white">
             Ukiah United Methodist Church
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function ArchivePage() {
               <li key={bulletin.date}>
                 <a
                   href={`/${bulletin.date}`}
-                  className="block p-4 border border-black font-serif text-black hover:bg-black hover:text-white transition-colors"
+                  className="block p-4 border border-black dark:border-white font-serif text-black dark:text-white hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
                 >
                   {bulletin.title}
                 </a>
@@ -39,7 +39,7 @@ export default function ArchivePage() {
         <div className="text-center mt-8">
           <a 
             href="/2025-07-13"
-            className="inline-block font-sans font-bold text-black border-2 border-black px-6 py-3 uppercase tracking-wide hover:bg-black hover:text-white transition-colors"
+            className="inline-block font-sans font-bold text-black dark:text-white border-2 border-black dark:border-white px-6 py-3 uppercase tracking-wide hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
             Current Bulletin
           </a>

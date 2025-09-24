@@ -80,7 +80,7 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
   }
 
   return (
-    <div className="bg-white text-black font-serif min-h-screen pb-20">
+    <div className="bg-white text-black dark:bg-black dark:text-white font-serif min-h-screen pb-20">
       {/* Slide-out menu */}    
       <TableOfContents 
         isOpen={isMenuOpen}
@@ -89,27 +89,27 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
       />
       
       {/* Header */}
-      <div className="text-center py-8 px-4 border-b border-black">
-        <h1 className="text-2xl font-sans font-bold text-black mb-2">
+      <div className="text-center py-8 px-4 border-b border-black dark:border-white">
+        <h1 className="text-2xl font-sans font-bold text-black dark:text-white mb-2">
           {bulletinData.churchName}
         </h1>
-        <p className="text-lg font-serif italic text-black mb-4">
+        <p className="text-lg font-serif italic text-black dark:text-white mb-4">
           {bulletinData.motto}
         </p>
-        <p className="text-xl font-sans font-bold text-black mb-2">
+        <p className="text-xl font-sans font-bold text-black dark:text-white mb-2">
           {bulletinData.date}
         </p>
-        <p className="text-lg font-serif text-black">
+        <p className="text-lg font-serif text-black dark:text-white">
           {bulletinData.theme}
         </p>
       </div>
 
       {/* Instructions */}
       <div className="px-4 py-6 text-center">
-        <p className="font-serif text-black text-sm leading-relaxed">
+        <p className="font-serif text-black dark:text-white text-sm leading-relaxed">
           {bulletinData.instructions}
         </p>
-        <p className="font-serif text-black text-sm leading-relaxed mt-2">
+        <p className="font-serif text-black dark:text-white text-sm leading-relaxed mt-2">
           {bulletinData.hymnalKey}
         </p>
       </div>
@@ -120,14 +120,14 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
       </div>
 
       {/* Contact Info */}
-      <div className="px-4 py-6 border-t border-black text-center">
-        <p className="font-serif text-black text-sm mb-2">
+      <div className="px-4 py-6 border-t border-black dark:border-white text-center">
+        <p className="font-serif text-black dark:text-white text-sm mb-2">
           {bulletinData.contactInfo.address}
         </p>
-        <p className="font-serif text-black text-sm mb-2">
+        <p className="font-serif text-black dark:text-white text-sm mb-2">
           {bulletinData.contactInfo.website}
         </p>
-        <p className="font-serif text-black text-sm">
+        <p className="font-serif text-black dark:text-white text-sm">
           WiFi: {bulletinData.contactInfo.wifi.network} | Password: {bulletinData.contactInfo.wifi.password}
         </p>
       </div>

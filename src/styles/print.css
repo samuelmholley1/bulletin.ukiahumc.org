@@ -1,0 +1,43 @@
+/* Print-specific styles for church bulletin */
+@media print {
+  /* Hide interactive elements during printing */
+  .hud-footer,
+  [data-print-hidden] {
+    display: none !important;
+  }
+  
+  /* Hide slide-out menu */
+  .table-of-contents {
+    display: none !important;
+  }
+  
+  /* Hide backdrop overlay */
+  .backdrop {
+    display: none !important;
+  }
+  
+  /* Ensure proper page breaks */
+  .service-section {
+    break-inside: avoid;
+  }
+  
+  /* Optimize text for printing */
+  body {
+    font-size: 12pt !important;
+    line-height: 1.4 !important;
+    color: black !important;
+    background: white !important;
+  }
+  
+  /* Ensure headings are properly styled for print */
+  h1, h2, h3, h4, h5, h6 {
+    color: black !important;
+    page-break-after: avoid;
+  }
+  
+  /* Remove shadows and borders that don't print well */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}
