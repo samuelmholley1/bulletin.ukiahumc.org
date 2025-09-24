@@ -1,6 +1,7 @@
 import { BulletinData } from '@/types/bulletin'
 import ServiceElement from './ServiceElement'
 import Image from 'next/image'
+import Link from 'next/link'
 
 interface BulletinPageProps {
   data: BulletinData
@@ -10,17 +11,47 @@ export default function BulletinPage({ data }: BulletinPageProps) {
   return (
     <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
+        
+        {/* Back to Bulletins Link */}
+        <div className="mb-6">
+          <Link 
+            href="/bulletins"
+            className="inline-flex items-center text-blue-600 hover:text-blue-800 transition-colors"
+          >
+            <svg 
+              className="w-4 h-4 mr-2" 
+              fill="none" 
+              stroke="currentColor" 
+              viewBox="0 0 24 24"
+            >
+              <path 
+                strokeLinecap="round" 
+                strokeLinejoin="round" 
+                strokeWidth={2} 
+                d="M15 19l-7-7 7-7" 
+              />
+            </svg>
+            Back to All Bulletins
+          </Link>
+        </div>
         {/* Header */}
         <header className="text-center mb-8">
           <div className="mb-6">
-            <Image
-              src="/logo-for-church-larger.jpg"
-              alt="Ukiah United Methodist Church Logo"
-              width={150}
-              height={150}
-              className="mx-auto rounded-lg shadow-lg"
-              priority
-            />
+            <a 
+              href="https://ukiahumc.org" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block hover:opacity-80 transition-opacity"
+            >
+              <Image
+                src="/logo-for-church-larger.jpg"
+                alt="Ukiah United Methodist Church Logo"
+                width={150}
+                height={150}
+                className="mx-auto rounded-lg shadow-lg"
+                priority
+              />
+            </a>
           </div>
           
           <h1 className="text-3xl font-bold uppercase tracking-wide text-gray-800 mb-2">
