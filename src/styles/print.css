@@ -2,6 +2,7 @@
 @media print {
   /* Hide interactive elements during printing */
   .hud-footer,
+  .hud-header,
   [data-print-hidden] {
     display: none !important;
   }

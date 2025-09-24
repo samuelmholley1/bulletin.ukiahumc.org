@@ -39,7 +39,7 @@ export default function TableOfContents({ isOpen, serviceOrder, onClose }: Table
       
       {/* Slide-out menu */}
       <div 
-        className={`fixed top-0 left-0 h-full w-80 bg-white dark:bg-black border-r border-black dark:border-white z-50 transform transition-transform duration-300 table-of-contents ${
+        className={`fixed top-0 left-0 h-full w-80 bg-white dark:bg-black border-r border-black dark:border-white z-50 transform transition-transform duration-300 table-of-contents flex flex-col ${
           isOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
         role="dialog"
@@ -49,9 +49,9 @@ export default function TableOfContents({ isOpen, serviceOrder, onClose }: Table
         tabIndex={-1}
         data-print-hidden
       >
-        <div className="p-6">
-          {/* Header */}
-          <div className="flex justify-between items-center mb-6 border-b border-black dark:border-white pb-4">
+        {/* Fixed Header */}
+        <div className="flex-shrink-0 p-6 pb-4">
+          <div className="flex justify-between items-center border-b border-black dark:border-white pb-4">
             <h2 className="text-lg font-sans font-bold text-black dark:text-white uppercase">
               Table of Contents
             </h2>
@@ -62,9 +62,12 @@ export default function TableOfContents({ isOpen, serviceOrder, onClose }: Table
               ×
             </button>
           </div>
+        </div>
 
+        {/* Scrollable Content */}
+        <div className="flex-1 overflow-y-auto px-6">
           {/* Service Order Links */}
-          <nav className="space-y-3 mb-8">
+          <nav className="space-y-3 pb-6">
             {serviceOrder.map((section, index) => (
               <button
                 key={section.id}
@@ -75,16 +78,16 @@ export default function TableOfContents({ isOpen, serviceOrder, onClose }: Table
               </button>
             ))}
           </nav>
+        </div>
 
-          {/* Archive Link */}
-          <div className="border-t border-black dark:border-white pt-4">
-            <a 
-              href="/archive"
-              className="font-sans font-bold text-black dark:text-white uppercase tracking-wide text-sm hover:underline"
-            >
-              Bulletin Archive
-            </a>
-          </div>
+        {/* Fixed Archive Link at Bottom */}
+        <div className="flex-shrink-0 p-6 pt-4 border-t border-black dark:border-white">
+          <a 
+            href="/archive"
+            className="font-sans font-bold text-black dark:text-white uppercase tracking-wide text-sm hover:underline"
+          >
+            Bulletin Archive
+          </a>
         </div>
       </div>
     </>

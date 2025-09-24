@@ -2,6 +2,7 @@
 
 import { useState } from 'react'
 import HudFooter from '@/components/HudFooter'
+import HudHeader from '@/components/HudHeader'
 import TableOfContents from '@/components/TableOfContents'
 import useScrollSpy from '@/hooks/useScrollSpy'
 import SectionTitle from '@/components/bulletin/SectionTitle'
@@ -80,7 +81,13 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
   }
 
   return (
-    <div className="bg-white text-black dark:bg-black dark:text-white font-serif min-h-screen pb-20">
+    <div className="bg-white text-black dark:bg-black dark:text-white font-serif min-h-screen pb-20 pt-12">
+      {/* HUD Header */}
+      <HudHeader 
+        activeSectionId={activeSectionId}
+        serviceOrder={bulletinData.serviceOrder}
+      />
+      
       {/* Slide-out menu */}    
       <TableOfContents 
         isOpen={isMenuOpen}
