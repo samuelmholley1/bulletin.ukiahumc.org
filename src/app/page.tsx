@@ -75,9 +75,9 @@ export default function Home() {
         {/* Review Previous Bulletin Button */}
         <div className="flex justify-center mb-8">
           <a
-            href="#previous-bulletin"
+            href="/7-13-25"
             className="inline-flex items-center px-6 py-3 bg-blue-600 text-white font-semibold rounded-lg shadow hover:bg-blue-700 transition-colors duration-200 ease-in-out"
-            title="Previous bulletin feature coming soon"
+            title="View July 13, 2025 bulletin"
           >
             <svg 
               className="w-5 h-5 mr-2" 
@@ -92,7 +92,7 @@ export default function Home() {
                 d="M15 19l-7-7 7-7" 
               />
             </svg>
-            Review Previous Bulletin
+            July 13, 2025 Bulletin
           </a>
         </div>
 
