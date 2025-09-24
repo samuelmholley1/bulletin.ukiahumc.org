@@ -4,7 +4,7 @@ interface SectionTitleProps {
 
 export default function SectionTitle({ title }: SectionTitleProps) {
   return (
-    <h2 className="text-xl font-bold uppercase mt-8 mb-3 border-b pb-2 text-gray-800">
+    <h2 className="text-xl font-sans font-bold uppercase mt-10 mb-4 text-black">
       {title}
     </h2>
   )

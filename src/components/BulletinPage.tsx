@@ -9,7 +9,7 @@ interface BulletinPageProps {
 
 export default function BulletinPage({ data }: BulletinPageProps) {
   return (
-    <main className="min-h-screen bg-gradient-to-b from-blue-50 to-white">
+    <main className="min-h-screen bg-white text-black font-serif">
       <div className="container mx-auto px-4 py-8 max-w-4xl">
         
         {/* Back to Bulletins Link */}
@@ -54,12 +54,12 @@ export default function BulletinPage({ data }: BulletinPageProps) {
             </a>
           </div>
           
-          <h1 className="text-3xl font-bold uppercase tracking-wide text-gray-800 mb-2">
+          <h1 className="text-3xl font-sans font-bold uppercase tracking-wide text-black mb-2">
             {data.churchName}
           </h1>
           
           {/* Contact Info */}
-          <div className="text-sm text-gray-600 mb-4 space-y-1">
+          <div className="text-sm text-black mb-4 space-y-1">
             <p>{data.contactInfo.address}</p>
             <p>{data.contactInfo.website}</p>
             <p>Wi-Fi Network: {data.contactInfo.wifi.network} Password: {data.contactInfo.wifi.password}</p>
@@ -71,15 +71,15 @@ export default function BulletinPage({ data }: BulletinPageProps) {
             ))}
           </div>
 
-          <h2 className="text-xl font-bold uppercase tracking-wide text-blue-600 mb-2">
+          <h2 className="text-xl font-sans font-bold uppercase tracking-wide text-black mb-2">
             {data.motto}
           </h2>
           
-          <h2 className="text-2xl font-bold uppercase tracking-wide text-gray-800 mb-4">
+          <h2 className="text-2xl font-sans font-bold uppercase tracking-wide text-black mb-4">
             {data.date} ~ {data.theme}
           </h2>
           
-          <div className="text-sm text-gray-600 mb-4">
+          <div className="text-sm text-black mb-4">
             <p>{data.instructions}</p>
             <p className="mt-2">{data.hymnalKey}</p>
           </div>

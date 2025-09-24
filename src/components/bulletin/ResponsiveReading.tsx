@@ -8,15 +8,15 @@ interface ResponsiveReadingProps {
 export default function ResponsiveReading({ title, content }: ResponsiveReadingProps) {
   return (
     <div className="my-8">
-      <h3 className="text-xl font-bold uppercase mb-4 text-gray-800">{title}</h3>
-      <div className="space-y-3 bg-gray-50 p-6 rounded-lg">
+      <h3 className="text-xl font-sans font-bold uppercase mb-4 text-black">{title}</h3>
+      <div className="space-y-3">
         {content.map((item, index) => (
-          <p key={index} className="leading-relaxed">
-            <strong className="font-semibold mr-2 text-blue-700">{item.speaker}:</strong>
+          <p key={index} className="leading-relaxed font-serif text-black">
+            <strong className="font-sans font-bold mr-2">{item.speaker}:</strong>
             {item.isCongregation ? (
-              <span className="font-bold text-gray-800">{item.text}</span>
+              <span className="font-bold">{item.text}</span>
             ) : (
-              <span className="text-gray-700">{item.text}</span>
+              <span>{item.text}</span>
             )}
           </p>
         ))}

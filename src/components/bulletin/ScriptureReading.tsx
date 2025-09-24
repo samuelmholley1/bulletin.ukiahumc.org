@@ -8,13 +8,13 @@ interface ScriptureReadingProps {
 export default function ScriptureReading({ title, reference, version, content }: ScriptureReadingProps) {
   return (
     <div className="my-8">
-      <h3 className="text-xl font-bold uppercase mb-4 text-gray-800">{title}</h3>
-      <div className="bg-blue-50 p-6 rounded-lg">
-        <h4 className="text-lg font-semibold mb-2 text-blue-800">{reference}</h4>
-        <p className="text-sm text-gray-500 mb-4 italic">{version}</p>
-        <div className="prose max-w-none">
+      <h3 className="text-xl font-sans font-bold uppercase mb-4 text-black">{title}</h3>
+      <div>
+        <h4 className="text-lg font-serif font-bold mb-2 text-black">{reference}</h4>
+        <p className="text-sm font-serif italic mb-4 text-black">{version}</p>
+        <div className="max-w-none">
           {content.map((paragraph, index) => (
-            <p key={index} className="mb-4 text-gray-700 leading-relaxed">
+            <p key={index} className="mb-4 font-serif text-black leading-relaxed">
               {paragraph}
             </p>
           ))}
