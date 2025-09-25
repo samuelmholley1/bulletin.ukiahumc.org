@@ -29,7 +29,7 @@ export default function Header({ churchName, motto, date, theme, contactInfo }: 
         {/* Church Logo */}
         <div className="flex-shrink-0">
           <Image 
-            src="/logo-for-church-larger.jpg" 
+            src="/android-chrome-512x512.png" 
             alt="Church Logo" 
             width={64}
             height={64}
