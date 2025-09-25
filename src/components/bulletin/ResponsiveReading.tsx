@@ -18,11 +18,7 @@ export default function ResponsiveReading({ data }: ResponsiveReadingProps) {
         {data.content.map((item, index) => (
           <p key={index} className="leading-relaxed font-serif text-black">
             <strong className="font-sans font-bold mr-2">{item.speaker}:</strong>
-            {item.isCongregation ? (
-              <span className="font-bold">{item.text}</span>
-            ) : (
-              <span>{item.text}</span>
-            )}
+            <span>{item.text}</span>
           </p>
         ))}
       </div>

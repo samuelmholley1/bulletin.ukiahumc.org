@@ -1,5 +1,6 @@
 export default function ArchivePage() {
   const bulletins = [
+    { date: '2025-09-28', title: 'September 28, 2025 - Changemakers' },
     { date: '2025-07-13', title: 'July 13, 2025 - Wholly Human-Holy Divine' },
     { date: '2025-07-20', title: 'July 20, 2025' },
     { date: '2025-07-27', title: 'July 27, 2025' },
@@ -38,7 +39,7 @@ export default function ArchivePage() {
         {/* Back to Current */}
         <div className="text-center mt-8">
           <a 
-            href="/2025-07-13"
+            href="/2025-09-28"
             className="inline-block font-sans font-bold text-black dark:text-white border-2 border-black dark:border-white px-6 py-3 uppercase tracking-wide hover:bg-black hover:text-white dark:hover:bg-white dark:hover:text-black transition-colors"
           >
             Current Bulletin

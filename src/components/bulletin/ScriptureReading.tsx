@@ -13,7 +13,7 @@ export default function ScriptureReading({ data }: ScriptureReadingProps) {
     <div id={data.id} className="my-8">
       <h3 className="text-xl font-sans font-bold uppercase mb-4 text-black">{data.title}</h3>
       <div>
-        <h4 className="text-lg font-serif font-bold mb-2 text-black">{data.reference}</h4>
+        <h4 className="text-lg font-sans font-bold mb-2 text-black">{data.reference}</h4>
         <p className="text-sm font-serif italic mb-4 text-black">{data.version}</p>
         <div className="max-w-none">
           {data.content.map((paragraph, index) => (

@@ -1,6 +1,7 @@
 'use client'
 
 import { useState } from 'react'
+import { bulletinData } from '@/app/bulletins/2025-09-28-data'
 import HudFooter from '@/components/HudFooter'
 import HudHeader from '@/components/HudHeader'
 import TableOfContents from '@/components/TableOfContents'
@@ -20,26 +21,10 @@ import MembershipStatement from '@/components/bulletin/MembershipStatement'
 import GoForIt from '@/components/bulletin/GoForIt'
 import Announcements from '@/components/bulletin/Announcements'
 import WelcomingStatement from '@/components/bulletin/WelcomingStatement'
+import EmbeddedPoem from '@/components/EmbeddedPoem'
+import SongLyrics from '@/components/SongLyrics'
 
-interface BulletinContentProps {
-  bulletinData: {
-    churchName: string
-    motto: string
-    date: string
-    theme: string
-    contactInfo: any
-    instructions: string
-    hymnalKey: string
-    serviceOrder: Array<{
-      id: string
-      type: string
-      title: string
-      [key: string]: any
-    }>
-  }
-}
-
-export default function BulletinContent({ bulletinData }: BulletinContentProps) {
+export default function September28Bulletin() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   
   // Extract IDs for scroll spy
@@ -76,6 +61,10 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
         return <Announcements key={section.id} data={section} />
       case 'welcomingStatement':
         return <WelcomingStatement key={section.id} data={section} />
+      case 'embeddedPoem':
+        return <EmbeddedPoem key={section.id} content={section.content} />
+      case 'songLyrics':
+        return <SongLyrics key={section.id} data={section} />
       default:
         return null
     }
@@ -121,8 +110,6 @@ export default function BulletinContent({ bulletinData }: BulletinContentProps) 
       <div className="px-4 pb-4">
         {bulletinData.serviceOrder.map(renderServiceElement)}
       </div>
-
-
 
       {/* HUD Footer */}
       <HudFooter 
