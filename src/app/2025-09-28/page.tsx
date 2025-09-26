@@ -62,7 +62,7 @@ export default function September28Bulletin() {
       case 'welcomingStatement':
         return <WelcomingStatement key={section.id} data={section} />
       case 'embeddedPoem':
-        return <EmbeddedPoem key={section.id} content={section.content} />
+        return <EmbeddedPoem key={section.id} id={section.id} content={section.content} />
       case 'songLyrics':
         return <SongLyrics key={section.id} data={section} />
       default:
