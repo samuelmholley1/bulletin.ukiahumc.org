@@ -34,7 +34,7 @@ export default function September28Bulletin() {
   const renderServiceElement = (section: any) => {
     switch (section.type) {
       case 'sectionTitle':
-        return <SectionTitle key={section.id} data={section} />
+        return section.title ? <SectionTitle key={section.id} data={section} /> : null
       case 'hymn':
         return <HymnDisplay key={section.id} data={section} />
       case 'responsiveReading':
@@ -66,6 +66,7 @@ export default function September28Bulletin() {
       case 'songLyrics':
         return <SongLyrics key={section.id} data={section} />
       default:
+        console.warn('Unknown section type:', section.type, section)
         return null
     }
   }

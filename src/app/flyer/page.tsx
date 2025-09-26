@@ -33,11 +33,10 @@ export default function FlyerPage() {
       {/* QR Code */}
       <div className="mb-8 text-center">
         <div className="mb-4">
-          <Image 
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img 
             src={qrCodeUrl}
             alt="QR Code to bulletin.ukiahumc.org"
-            width={288}
-            height={288}
             className="w-72 h-72 mx-auto border-2 border-gray-200"
           />
         </div>
