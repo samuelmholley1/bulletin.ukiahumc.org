@@ -1,7 +1,6 @@
 import { bulletinData } from '@/app/bulletins/2025-07-13-data'
 import PlaceholderBulletin from './PlaceholderBulletin'
 import BulletinContent from './BulletinContent'
-import { redirect } from 'next/navigation'
 
 interface BulletinPageProps {
   params: {
@@ -10,11 +9,6 @@ interface BulletinPageProps {
 }
 
 export default function BulletinPage({ params }: BulletinPageProps) {
-  // Redirect to the new September 28 page
-  if (params.date === '2025-09-28') {
-    redirect('/2025-09-28')
-  }
-  
   // Only show full content for July 13, 2025 bulletin
   if (params.date === '2025-07-13') {
     return <BulletinContent bulletinData={bulletinData} />
@@ -30,6 +24,5 @@ export function generateStaticParams() {
     { date: '2025-07-20' },
     { date: '2025-07-27' },
     { date: '2025-08-03' },
-    { date: '2025-09-28' },
   ]
 }
